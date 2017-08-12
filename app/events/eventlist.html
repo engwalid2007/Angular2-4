@@ -1,16 +1,4 @@
 <h1>
     Upcoming Events
 </h1>
-<div class="well thumbnail hoverwell">
-    <h3>{{event.name}}</h3>
-    <div>Date: {{event.date}}</div>
-    <div>Time: {{event.time}}</div>
-    <div>Price: ${{event.price}}</div>
-    <div>
-        <span>location: {{event.location.address}}</span>
-        &nbsp;
-        <span>city: {{event.location.city}}</span>,
-        <span>country: {{event.location.country}}</span>
-    </div>
-
-</div>
+<event-thumbnail [event]="event" (eventEmitted)="handleEvent($event)"></event-thumbnail>

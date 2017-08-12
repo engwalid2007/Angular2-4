@@ -16,4 +16,7 @@ export class EventsListComponent {
             address: 'Almalaz'
         }
     }
+    handleEvent(data):void{
+        console.log(data);
+    }
 }
