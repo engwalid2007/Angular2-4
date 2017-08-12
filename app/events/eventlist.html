@@ -1,4 +1,5 @@
 <h1>
     Upcoming Events
 </h1>
-<event-thumbnail [event]="event" (eventEmitted)="handleEvent($event)"></event-thumbnail>
+<event-thumbnail #thumbnail [event]="event" #thumnail (eventEmitted)="handleEvent($event)"></event-thumbnail>
+<!-- <button>{{thumbnail.someProperty}}</button> -->

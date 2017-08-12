@@ -10,4 +10,5 @@ export class EventThumbnail{
     handleClick():void{
         this.eventEmitted.emit(this.event.name);
    }
+   someProperty:any="This name from child"
 }
