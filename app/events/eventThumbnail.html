@@ -1,7 +1,7 @@
 <div class="well thumbnail hoverwell" *ngIf="event" >
     <h3>{{event?.name}}</h3>
     <div>Date: {{event?.date}}</div>
-    <div [ngSwitch]="event?.time">Time: {{event?.time}}
+    <div [ngClass]="applyClass()" [ngSwitch]="event?.time">Time: {{event?.time}}
         <span *ngSwitchCase="'10:00 am'">(late start)</span>
         <span *ngSwitchCase="'8:00 am'">(early start)</span>
         <span *ngSwitchDefault>(normal start)</span>
@@ -13,4 +13,6 @@
         <span>country: {{event?.location?.country}}</span>
     </div>
     <!-- <button (click)="handleClick()" id="btnClickme">Click me </button> -->
+
+    <!--{green:event?.time==='8:00 am',bold:event?.time==='8:00 am'}  -->
 </div>

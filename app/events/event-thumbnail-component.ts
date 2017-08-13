@@ -6,6 +6,7 @@ import{Component,Input, Output , EventEmitter} from '@angular/core'
         .thumbnail{
             min-height:230px;
         }
+        .green{color:green;}.bold:{font-weight:bold !important;}
        `
     ]
 })
@@ -17,4 +18,10 @@ export class EventThumbnail{
         this.eventEmitted.emit(this.event.name);
    }
    someProperty:any="This name from child"
+
+   applyClass(){
+       if(this.event.time=="8:00 am")
+        return ['green','bold']
+       return[]
+   }
 }
