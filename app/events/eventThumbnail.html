@@ -1,7 +1,11 @@
 <div class="well thumbnail hoverwell" *ngIf="event" >
     <h3>{{event?.name}}</h3>
     <div>Date: {{event?.date}}</div>
-    <div>Time: {{event?.time}}</div>
+    <div [ngSwitch]="event?.time">Time: {{event?.time}}
+        <span *ngSwitchCase="'10:00 am'">(late start)</span>
+        <span *ngSwitchCase="'8:00 am'">(early start)</span>
+        <span *ngSwitchDefault>(normal start)</span>
+    </div>
     <div>Price: ${{event?.price}}</div>
     <div>
         <span>location: {{event?.location?.address}}</span> &nbsp;
