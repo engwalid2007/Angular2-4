@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import{Injectable} from '@angular/core'
-=======
-import { Injectable } from '@angular/core'
->>>>>>> 5eb80da82ddc7c91e2adb6d04a302cd562c569f2
 
 @Injectable()
 export class EventService {
@@ -317,5 +313,9 @@ export class EventService {
                 ]
             }
         ];
+    }
+
+    getEvent(id:number){
+        return this.getEvents().find(e=>e.id===id);
     }
 }
