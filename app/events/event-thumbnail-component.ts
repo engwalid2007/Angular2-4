@@ -1,7 +1,13 @@
 import{Component,Input, Output , EventEmitter} from '@angular/core'
 @Component({
     templateUrl:'app/events/eventThumbnail.html',
-    selector:'event-thumbnail'
+    selector:'event-thumbnail',
+    styles:[`
+        .thumbnail{
+            min-height:230px;
+        }
+       `
+    ]
 })
 export class EventThumbnail{
    @Input() event:any; 
