@@ -9,6 +9,7 @@ import { EventService } from './events/shared/eventService'
 import { ToastrService } from './events/shared/toastrService'
 import { Eventdetails } from './events/event-details-component'
 import { appRoutes } from './events/rotes'
+import {NewEvent} from './events/new-event-component'
 @NgModule({
     imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
     declarations: [
@@ -16,7 +17,8 @@ import { appRoutes } from './events/rotes'
         EventsListComponent,
         EventThumbnail,
         NavBar,
-        Eventdetails
+        Eventdetails,
+        NewEvent
     ],
     providers: [EventService, ToastrService],
     bootstrap: [EventsAppComponent]
