@@ -10,6 +10,8 @@ import { ToastrService } from './events/shared/toastrService'
 import { Eventdetails } from './events/event-details-component'
 import { appRoutes } from './events/rotes'
 import {NewEvent} from './events/new-event-component'
+import {Error404} from './errors/error-404-component'
+import {ValidateEventIsExist} from './events/shared/validateEventIsExistService'
 @NgModule({
     imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
     declarations: [
@@ -18,9 +20,10 @@ import {NewEvent} from './events/new-event-component'
         EventThumbnail,
         NavBar,
         Eventdetails,
-        NewEvent
+        NewEvent,
+        Error404
     ],
-    providers: [EventService, ToastrService],
+    providers: [EventService, ToastrService,ValidateEventIsExist],
     bootstrap: [EventsAppComponent]
 })
 export class AppModule { }
