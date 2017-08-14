@@ -1,4 +1,4 @@
-<div class="well thumbnail hoverwell" *ngIf="event" >
+<div class="well thumbnail hoverwell" *ngIf="event" [routerLink]="['/events',event?.id]">
     <h3>{{event?.name}}</h3>
     <div>Date: {{event?.date}}</div>
     <div [ngClass]="applyClass()" [ngSwitch]="event?.time">Time: {{event?.time}}
