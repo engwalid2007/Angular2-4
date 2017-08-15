@@ -1,4 +1,5 @@
 import{Component,Input, Output , EventEmitter} from '@angular/core'
+import {IEvent} from './models/event-models'
 @Component({
     templateUrl:'app/events/eventThumbnail.html',
     selector:'event-thumbnail',
@@ -11,7 +12,7 @@ import{Component,Input, Output , EventEmitter} from '@angular/core'
     ]
 })
 export class EventThumbnail{
-   @Input() event:any; 
+   @Input() event:IEvent; 
    @Output() eventEmitted = new EventEmitter();
 
     handleClick():void{
