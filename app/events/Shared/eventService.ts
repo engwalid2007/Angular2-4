@@ -8,7 +8,7 @@ export class EventService {
         setTimeout(()=> {
             sub.next(this.Events);
             sub.complete();
-        }, 10000); 
+        }, 100); 
         return sub;
     }
 
