@@ -1,9 +1,22 @@
 import{Injectable} from '@angular/core'
-
+import {Subject} from 'rxjs/Rx'
 @Injectable()
 export class EventService {
     getEvents() {
-        return [
+        let sub = new Subject();
+
+        setTimeout(()=> {
+            sub.next(this.Events);
+            sub.complete();
+        }, 10000); 
+        return sub;
+    }
+
+    getEvent(id:number){
+        return this.Events.find(e=>e.id===id);
+    }
+
+   private Events=[
             {
                 id: 1,
                 name: 'Angular Connect',
@@ -313,9 +326,4 @@ export class EventService {
                 ]
             }
         ];
-    }
-
-    getEvent(id:number){
-        return this.getEvents().find(e=>e.id===id);
-    }
 }

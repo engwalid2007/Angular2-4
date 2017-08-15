@@ -7,6 +7,7 @@ export class NewEvent{
     /**
      *
      */
+    isDirty:boolean = true;
     constructor(private router:Router) {
         
         
