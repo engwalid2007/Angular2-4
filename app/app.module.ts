@@ -13,6 +13,7 @@ import {NewEvent} from './events/new-event-component'
 import {Error404} from './errors/error-404-component'
 import {ValidateEventIsExist} from './events/shared/validateEventIsExistService'
 import {EventListResolver} from './events/shared/event-list-resolver-service'
+import { UserLoginService } from './User/services/userlogin'
 @NgModule({
     imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
     declarations: [
@@ -29,6 +30,7 @@ import {EventListResolver} from './events/shared/event-list-resolver-service'
         ToastrService,
         ValidateEventIsExist,
         EventListResolver,
+        UserLoginService,
     {
      provide:'CanDeactivate',
      useValue: CheckDirty   
